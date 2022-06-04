@@ -1,10 +1,10 @@
 <template>
   <div class="text-center container">
       <div>
-    <v-btn rounded dark> Animes </v-btn>
+    <v-btn rounded dark @click="toAnime()"> Animes </v-btn>
     </div>
     <div>
-    <v-btn rounded dark> Portraits </v-btn>
+    <v-btn rounded dark @click="toPortrait()"> Portraits </v-btn>
   </div>
   </div>
 </template>
@@ -28,3 +28,15 @@
 </style>
 
 
+<script>
+export default {
+  methods: {
+    toAnime() {
+      this.$router.push('/anime');
+    },
+    toPortrait() {
+      this.$router.push('/portrait');
+    },
+  },
+}
+</script>
